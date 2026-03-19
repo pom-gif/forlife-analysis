@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>for life 診断</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       GLOBAL NAVIGATION (PC header)
+  ============================================================ -->
+  <header class="global-nav" id="global-nav">
+    <div class="nav-inner">
+      <div class="nav-brand" id="nav-logo">
+        <svg class="nav-poodle" width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="18" r="10" fill="#1f2f54"/>
+          <ellipse cx="22" cy="20" rx="6" ry="9" fill="#1f2f54"/>
+          <ellipse cx="42" cy="20" rx="6" ry="9" fill="#1f2f54"/>
+          <circle cx="26" cy="15" r="4" fill="#1f2f54"/>
+          <circle cx="38" cy="15" r="4" fill="#1f2f54"/>
+          <circle cx="32" cy="12" r="4" fill="#1f2f54"/>
+          <ellipse cx="32" cy="22" rx="3" ry="2" fill="#ffffff"/>
+          <ellipse cx="32" cy="22" rx="1.5" ry="1" fill="#1f2f54"/>
+          <circle cx="27" cy="18" r="1.5" fill="#ffffff"/>
+          <circle cx="37" cy="18" r="1.5" fill="#ffffff"/>
+          <ellipse cx="32" cy="42" rx="12" ry="10" fill="#1f2f54"/>
+          <circle cx="22" cy="40" r="5" fill="#1f2f54"/>
+          <circle cx="42" cy="40" r="5" fill="#1f2f54"/>
+          <circle cx="32" cy="32" r="5" fill="#1f2f54"/>
+          <rect x="23" y="50" width="6" height="10" rx="3" fill="#1f2f54"/>
+          <rect x="35" y="50" width="6" height="10" rx="3" fill="#1f2f54"/>
+          <circle cx="26" cy="60" r="3.5" fill="#1f2f54"/>
+          <circle cx="38" cy="60" r="3.5" fill="#1f2f54"/>
+          <path d="M44 38 Q54 30 52 24" stroke="#1f2f54" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <circle cx="52" cy="22" r="4" fill="#1f2f54"/>
+        </svg>
+        <span class="nav-brand-text">for life 診断</span>
+      </div>
+      <nav class="nav-links">
+        <button class="nav-link active" data-screen="screen-start" id="nav-shindan">診断する</button>
+        <button class="nav-link" data-screen="screen-types" id="nav-types">16タイプを見る</button>
+        <button class="nav-link" data-screen="screen-axes" id="nav-axes">診断軸について</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       SCREEN: START
+  ============================================================ -->
+  <div id="screen-start" class="screen active">
+    <div class="container">
+      <div class="card start-card">
+        <div class="brand">
+          <svg class="poodle-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 頭部 -->
+            <circle cx="32" cy="18" r="10" fill="#1f2f54"/>
+            <!-- 耳（左） -->
+            <ellipse cx="22" cy="20" rx="6" ry="9" fill="#1f2f54"/>
+            <!-- 耳（右） -->
+            <ellipse cx="42" cy="20" rx="6" ry="9" fill="#1f2f54"/>
+            <!-- 顔の毛のもふもふ感（小さい円） -->
+            <circle cx="26" cy="15" r="4" fill="#1f2f54"/>
+            <circle cx="38" cy="15" r="4" fill="#1f2f54"/>
+            <circle cx="32" cy="12" r="4" fill="#1f2f54"/>
+            <!-- 鼻 -->
+            <ellipse cx="32" cy="22" rx="3" ry="2" fill="#ffffff"/>
+            <ellipse cx="32" cy="22" rx="1.5" ry="1" fill="#1f2f54"/>
+            <!-- 目 -->
+            <circle cx="27" cy="18" r="1.5" fill="#ffffff"/>
+            <circle cx="37" cy="18" r="1.5" fill="#ffffff"/>
+            <!-- 体 -->
+            <ellipse cx="32" cy="42" rx="12" ry="10" fill="#1f2f54"/>
+            <!-- 体の毛のもふもふ -->
+            <circle cx="22" cy="40" r="5" fill="#1f2f54"/>
+            <circle cx="42" cy="40" r="5" fill="#1f2f54"/>
+            <circle cx="32" cy="32" r="5" fill="#1f2f54"/>
+            <!-- 前足 -->
+            <rect x="23" y="50" width="6" height="10" rx="3" fill="#1f2f54"/>
+            <rect x="35" y="50" width="6" height="10" rx="3" fill="#1f2f54"/>
+            <!-- 前足のぽんぽん -->
+            <circle cx="26" cy="60" r="3.5" fill="#1f2f54"/>
+            <circle cx="38" cy="60" r="3.5" fill="#1f2f54"/>
+            <!-- しっぽ -->
+            <path d="M44 38 Q54 30 52 24" stroke="#1f2f54" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <circle cx="52" cy="22" r="4" fill="#1f2f54"/>
+          </svg>
+          <div class="brand-text">
+            <span class="brand-en">for life</span>
+            <span class="brand-ja">診断</span>
+          </div>
+        </div>
+
+        <h1 class="catch">あなたの事業・副業・キャリアの<br>適性を知る60の質問</h1>
+        <p class="description">4つの軸＋RIASEC志向から、あなたのビジネス適性タイプを診断します。<br>所要時間：約5〜8分。直感で答えてください。</p>
+
+        <div class="axis-intro">
+          <div class="axis-item"><span class="axis-icon">⚡</span><span>動力源：影響型 or 設計型</span></div>
+          <div class="axis-item"><span class="axis-icon">🧠</span><span>判断軸：論理型 or 感性型</span></div>
+          <div class="axis-item"><span class="axis-icon">🎯</span><span>行動スタイル：戦略型 or 実行型</span></div>
+          <div class="axis-item"><span class="axis-icon">🌱</span><span>目的志向：自律型 or 貢献型</span></div>
+        </div>
+
+        <button class="btn-primary" id="btn-start">診断をはじめる</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCREEN: QUIZ
+  ============================================================ -->
+  <div id="screen-quiz" class="screen">
+    <div class="container">
+      <div class="quiz-header">
+        <div class="progress-meta">
+          <span id="progress-label">Q1 / 24</span>
+          <span id="progress-axis-label" class="axis-label"></span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="card quiz-card">
+        <div id="question-wrap" class="question-wrap">
+          <p class="question-number" id="q-number">Q1</p>
+          <p class="question-text" id="q-text"></p>
+          <div class="choices">
+            <button class="btn-choice" id="btn-a">
+              <span class="choice-label">A</span>
+              <span class="choice-text" id="choice-a-text"></span>
+            </button>
+            <button class="btn-choice" id="btn-b">
+              <span class="choice-label">B</span>
+              <span class="choice-text" id="choice-b-text"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-footer">
+        <button class="btn-back" id="btn-back">← 前の質問に戻る</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCREEN: RESULT
+  ============================================================ -->
+  <div id="screen-result" class="screen">
+    <div class="container">
+      <div class="card result-header-card">
+        <div class="result-animal" id="result-animal"></div>
+        <div class="result-type-code" id="result-type-code"></div>
+        <div class="result-name" id="result-name"></div>
+        <div class="result-title" id="result-title"></div>
+        <p class="result-description" id="result-description"></p>
+      </div>
+
+      <div class="card result-section">
+        <h3 class="section-title">このタイプの強み</h3>
+        <ul class="strength-list" id="strength-list"></ul>
+      </div>
+
+      <div class="card result-section">
+        <h3 class="section-title">向いているフィールド</h3>
+        <ul class="fit-list" id="fit-list"></ul>
+      </div>
+
+      <div class="card result-section" id="celeb-section">
+        <h3 class="section-title">このタイプの有名人</h3>
+        <ul class="celeb-list" id="celeb-list"></ul>
+      </div>
+
+      <div class="card result-section">
+        <h3 class="section-title">4軸スコア</h3>
+        <div class="axes-chart" id="axes-chart"></div>
+      </div>
+
+      <div class="card result-section">
+        <h3 class="section-title">あなたのビジネス志向（RIASEC）</h3>
+        <p class="section-desc">6つの志向軸からあなたのビジネス適性の傾向を示します</p>
+        <div class="riasec-chart" id="riasec-chart"></div>
+        <div class="riasec-top" id="riasec-top"></div>
+      </div>
+
+      <div class="result-actions">
+        <button class="btn-share" id="btn-share">𝕏 でシェアする</button>
+        <button class="btn-secondary" id="btn-retry">もう一度診断する</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCREEN: 16 TYPES
+  ============================================================ -->
+  <div id="screen-types" class="screen">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">16タイプ一覧</h1>
+        <p class="page-subtitle">あなたに近いタイプをクリックすると詳細が展開されます</p>
+      </div>
+      <div class="types-grid" id="types-grid"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCREEN: AXES
+  ============================================================ -->
+  <div id="screen-axes" class="screen">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">4つの軸について</h1>
+        <p class="page-subtitle">for life診断では、4つの軸の組み合わせであなたのビジネス適性タイプを判定します。MBTIと似た構造ですが、事業・副業・資産形成に特化した独自の設計です。</p>
+      </div>
+
+      <div class="axes-cards">
+        <div class="axis-card">
+          <div class="axis-card-header">
+            <span class="axis-num">軸1</span>
+            <span class="axis-letters"><strong>E</strong> / <strong>I</strong></span>
+            <span class="axis-concept">動力源（エネルギーの向き）</span>
+          </div>
+          <div class="axis-card-body">
+            <div class="axis-option axis-option-left">
+              <span class="axis-letter-badge">E</span>
+              <div>
+                <p class="axis-option-name">Expander（影響型）</p>
+                <p class="axis-option-desc">人を動かすことでエネルギーが生まれるタイプ。発信・影響・巻き込みがエンジンになる。</p>
+              </div>
+            </div>
+            <div class="axis-option axis-option-right">
+              <span class="axis-letter-badge axis-letter-badge-right">I</span>
+              <div>
+                <p class="axis-option-name">Innovator（設計型）</p>
+                <p class="axis-option-desc">思考と設計でエネルギーが生まれるタイプ。一人で深く考え、構造を整えることが原動力。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="axis-card">
+          <div class="axis-card-header">
+            <span class="axis-num">軸2</span>
+            <span class="axis-letters"><strong>L</strong> / <strong>S</strong></span>
+            <span class="axis-concept">判断軸（意思決定のスタイル）</span>
+          </div>
+          <div class="axis-card-body">
+            <div class="axis-option axis-option-left">
+              <span class="axis-letter-badge">L</span>
+              <div>
+                <p class="axis-option-name">Logical（論理型）</p>
+                <p class="axis-option-desc">データと数字と根拠で判断する。ROIと合理性を重視する。</p>
+              </div>
+            </div>
+            <div class="axis-option axis-option-right">
+              <span class="axis-letter-badge axis-letter-badge-right">S</span>
+              <div>
+                <p class="axis-option-name">Sensory（感性型）</p>
+                <p class="axis-option-desc">直感とストーリーと感情で判断する。世界観とブランドを重視する。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="axis-card">
+          <div class="axis-card-header">
+            <span class="axis-num">軸3</span>
+            <span class="axis-letters"><strong>P</strong> / <strong>A</strong></span>
+            <span class="axis-concept">行動スタイル（動き方）</span>
+          </div>
+          <div class="axis-card-body">
+            <div class="axis-option axis-option-left">
+              <span class="axis-letter-badge">P</span>
+              <div>
+                <p class="axis-option-name">Planner（戦略型）</p>
+                <p class="axis-option-desc">設計してから動く。全体像を見て最適な動き方を先に決める。</p>
+              </div>
+            </div>
+            <div class="axis-option axis-option-right">
+              <span class="axis-letter-badge axis-letter-badge-right">A</span>
+              <div>
+                <p class="axis-option-name">Adaptor（実行型）</p>
+                <p class="axis-option-desc">まず動いて調整する。試行錯誤とPDCAで前に進む。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="axis-card">
+          <div class="axis-card-header">
+            <span class="axis-num">軸4</span>
+            <span class="axis-letters"><strong>F</strong> / <strong>C</strong></span>
+            <span class="axis-concept">目的志向（何のために動くか）</span>
+          </div>
+          <div class="axis-card-body">
+            <div class="axis-option axis-option-left">
+              <span class="axis-letter-badge">F</span>
+              <div>
+                <p class="axis-option-name">Free（自律型）</p>
+                <p class="axis-option-desc">自分の自由・裁量・独立を最大化するために動く。</p>
+              </div>
+            </div>
+            <div class="axis-option axis-option-right">
+              <span class="axis-letter-badge axis-letter-badge-right">C</span>
+              <div>
+                <p class="axis-option-name">Connector（貢献型）</p>
+                <p class="axis-option-desc">誰かの役に立つこと・社会への影響のために動く。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="axes-example card">
+        <p class="axes-example-text">あなたのコードはこの4文字の組み合わせです。たとえば <strong>ELPC</strong> は「影響型 × 論理型 × 戦略型 × 貢献型」= <strong>ライオン型（カリスマリーダー）</strong>を意味します。</p>
+        <button class="btn-primary axes-start-btn" id="axes-btn-start">診断してみる</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MOBILE BOTTOM TAB BAR
+  ============================================================ -->
+  <nav class="mobile-tab-bar" id="mobile-tab-bar">
+    <button class="tab-item active" data-screen="screen-start" id="tab-shindan">
+      <span class="tab-icon">📝</span>
+      <span class="tab-label">診断する</span>
+    </button>
+    <button class="tab-item" data-screen="screen-types" id="tab-types">
+      <span class="tab-icon">🔍</span>
+      <span class="tab-label">16タイプ</span>
+    </button>
+    <button class="tab-item" data-screen="screen-axes" id="tab-axes">
+      <span class="tab-icon">📊</span>
+      <span class="tab-label">診断軸</span>
+    </button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
